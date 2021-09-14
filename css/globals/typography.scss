@@ -1,0 +1,24 @@
+@use '../util/index' as *;
+
+.service__title {
+	font-family: Raleway;
+	font-weight: bold;
+	font-size: rem(20);
+	line-height: 23px;
+	// text-align: center;
+	// * Mobil
+	// font-size: 18px;
+	// line-height: 24px;
+}
+
+.service__text {
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 21px;
+	text-align: center;
+	// font-size: 16px;
+	// line-height: 24px;
+	// text-align: left;
+}
