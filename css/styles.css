@@ -9,12 +9,25 @@ body {
   background-color: var(--main-blue);
 }
 
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
 .mb-10 {
   margin-bottom: 0.625rem;
 }
 
 .mb-15 {
   margin-bottom: 0.9375rem;
+}
+
+.mb-20 {
+  margin-bottom: 1.25rem;
+}
+
+.mb-25 {
+  margin-bottom: 1.5625rem;
 }
 
 :root {
@@ -24,11 +37,8 @@ body {
   --testimonials-blue: hsl(219, 30%, 18%);
   --email-blue: hsl(217, 28%, 15%);
   --main-blue: hsl(218, 28%, 13%);
-  --btn-gradient: linear-gradient(
-  	129.57deg,
-  	hsl(176, 68%, 64%) -26.63%,
-  	hsl(198, 60%, 50%) 100%
-  );
+  --link-blue: hsla(177, 67%, 63%);
+  --btn-gradient: linear-gradient(129.57deg, hsl(176, 68%, 64%) -26.63%, hsl(198, 60%, 50%) 100%);
 }
 
 .container__services {
@@ -39,21 +49,72 @@ body {
   justify-content: space-between;
   gap: 80px 0;
 }
+.container__productive {
+  max-width: 1235px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productive__img {
+  width: 50%;
+  max-width: 615px;
+}
+
+.productive__content {
+  width: 50%;
+  max-width: 565px;
+}
 
 .service__title {
-  font-family: Raleway;
+  font-family: "Raleway", sans-serif;
   font-weight: bold;
   font-size: 1.25rem;
   line-height: 23px;
 }
 
 .service__text {
-  font-family: Open Sans;
-  font-style: normal;
+  font-family: "Open Sans", sans-serif;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 21px;
-  text-align: center;
+}
+
+.productive__text {
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 24px;
+}
+
+.productive__title {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 50px;
+}
+
+.link {
+  /* check border botom  */
+}
+.link--blue {
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 22px;
+  display: inline-block;
+  border-bottom: 1px solid;
+  padding-bottom: 5px;
+  color: var(--link-blue);
+}
+.link--blue:hover {
+  color: var(--white);
+}
+.link--blue:hover [fill="#62E0D9"] {
+  fill: var(--white);
 }
 
 .btn {

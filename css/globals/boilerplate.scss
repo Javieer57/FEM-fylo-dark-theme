@@ -11,10 +11,23 @@ body {
 	background-color: var(--main-blue);
 }
 
+img {
+	max-width: 100%;
+	vertical-align: top;
+}
+
 .mb-10 {
 	margin-bottom: rem(10);
 }
 
 .mb-15 {
 	margin-bottom: rem(15);
+}
+
+.mb-20 {
+	margin-bottom: rem(20);
+}
+
+.mb-25 {
+	margin-bottom: rem(25);
 }

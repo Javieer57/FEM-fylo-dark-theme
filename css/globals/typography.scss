@@ -1,7 +1,7 @@
 @use '../util/index' as *;
 
 .service__title {
-	font-family: Raleway;
+	font-family: "Raleway", sans-serif;
 	font-weight: bold;
 	font-size: rem(20);
 	line-height: 23px;
@@ -12,13 +12,48 @@
 }
 
 .service__text {
-	font-family: Open Sans;
-	font-style: normal;
+	font-family: "Open Sans", sans-serif;
 	font-weight: normal;
-	font-size: 14px;
+	font-size: rem(14);
 	line-height: 21px;
-	text-align: center;
+	// text-align: center;
 	// font-size: 16px;
 	// line-height: 24px;
 	// text-align: left;
+}
+
+.productive__text {
+	font-family: "Open Sans", sans-serif;
+	font-weight: normal;
+	font-size: rem(16);
+	line-height: 24px;
+}
+
+.productive__title {
+	font-family: "Raleway", sans-serif;
+	font-weight: bold;
+	font-size: rem(40);
+	line-height: 50px;
+}
+
+.link {
+	/* check border botom  */
+	&--blue {
+		font-family: "Open Sans", sans-serif;
+		font-weight: normal;
+		text-decoration: none;
+		font-size: rem(16);
+		line-height: 22px;
+		display: inline-block;
+		border-bottom: 1px solid;
+		padding-bottom: 5px;
+		color: var(--link-blue);
+
+		&:hover {
+			color: var(--white);
+			[fill="#62E0D9"] {
+				fill: var(--white);
+			}
+		}
+	}
 }
