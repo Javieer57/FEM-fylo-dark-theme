@@ -1,0 +1,34 @@
+.testimonial__img {
+	display: inline-block;
+	width: 24px;
+
+	img {
+		vertical-align: middle;
+		border-radius: 50%;
+	}
+}
+
+.testimonial__info {
+	display: inline-block;
+}
+
+.testimonial__details {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+#first-testimonial {
+	position: relative;
+	&::after {
+		position: absolute;
+		z-index: -1;
+		content: "";
+		left: -10px;
+		top: -35px;
+		display: inline-block;
+		width: 55px;
+		height: 45px;
+		background-image: url("/images/bg-quotes.png");
+	}
+}
