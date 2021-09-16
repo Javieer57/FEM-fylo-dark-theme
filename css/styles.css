@@ -14,6 +14,10 @@ img {
   vertical-align: top;
 }
 
+.mb-5 {
+  margin-bottom: 0.3125rem;
+}
+
 .mb-10 {
   margin-bottom: 0.625rem;
 }
@@ -30,6 +34,10 @@ img {
   margin-bottom: 1.5625rem;
 }
 
+.mb-40 {
+  margin-bottom: 2.5rem;
+}
+
 .mb-150 {
   margin-bottom: 9.375rem;
 }
@@ -43,6 +51,7 @@ img {
   --main-blue: hsl(218, 28%, 13%);
   --link-blue: hsla(177, 67%, 63%);
   --btn-gradient: linear-gradient(129.57deg, hsl(176, 68%, 64%) -26.63%, hsl(198, 60%, 50%) 100%);
+  --btn-gradient-active: hsla(186, 61%, 72%, 1);
 }
 
 .container__services {
@@ -90,6 +99,26 @@ img {
   margin-top: 40px;
 }
 
+.newsletter {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px 75px;
+  background-color: var(--email-blue);
+  max-width: 863px;
+  border-radius: 10px;
+}
+
+.newsletter__content {
+  max-width: 709px;
+  text-align: center;
+}
+
+.newsletter__inputs {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+
 .service__title {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
@@ -135,6 +164,24 @@ img {
   line-height: 50px;
 }
 
+.newsletter__title {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 48px;
+}
+
+.newsletter__error {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 0.625rem;
+  text-align: left;
+  margin-left: 38px;
+  line-height: 14px;
+  color: var(--light-red);
+  visibility: hidden;
+}
+
 .link {
   /* check border botom  */
 }
@@ -176,6 +223,28 @@ img {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+.btn--blue {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  background-image: var(--btn-gradient);
+  border-radius: 25px;
+  border: 1px solid transparent;
+  color: var(--white);
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 16px;
+  padding: 15px 25px;
+  text-align: center;
+  user-select: none;
+}
+.btn--blue:active, .btn--blue:focus {
+  background-color: var(--btn-gradient-active);
+  background-image: none;
+}
+
 .btn:hover {
   color: #212529;
 }
@@ -204,6 +273,18 @@ img {
   background-color: #0b5ed7;
   border-color: #0a58ca;
   box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
+}
+
+.newsletter__mail {
+  padding: 15px 40px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 0.75rem;
+  line-height: 16px;
+  border-radius: 25px;
+  border: none;
+  width: 100%;
+  max-width: 480px;
 }
 
 .service {

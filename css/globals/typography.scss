@@ -53,6 +53,24 @@
 	line-height: 50px;
 }
 
+.newsletter__title {
+	font-family: "Raleway", sans-serif;
+	font-weight: bold;
+	font-size: rem(32);
+	line-height: 48px;
+}
+
+.newsletter__error {
+	font-family: "Open Sans", sans-serif;
+	font-weight: bold;
+	font-size: rem(10);
+	text-align: left;
+	margin-left: 38px;
+	line-height: 14px;
+	color: var(--light-red);
+	visibility: hidden;
+}
+
 .link {
 	/* check border botom  */
 	&--blue {
