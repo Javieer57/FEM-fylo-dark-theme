@@ -1,18 +1,19 @@
 // source: https://youtu.be/nI0BfXFjI1I
 
-// 400px , 640px , 950px , 1400px
+// 400px , 690px , 950px , 1400px
 $breakpoints-up: (
-	'small': '25em',
-	'medium': '40em',
-	'large': '59.375em',
-	'xlarge': '87.5em',
+	"small": "25em",
+	"medium": "43.125em",
+	"large": "59.375em",
+	"test": "78.125em",
+	"xlarge": "87.5em",
 );
 
 // 638.96px , 1023px , 1399px
 $breakpoints-down: (
-	'small': '39.9375em',
-	'medium': '63.9375em',
-	'large': '87.4375em',
+	"small": "39.9375em",
+	"medium": "63.9375em",
+	"large": "87.4375em",
 );
 
 @mixin breakpoint($size) {
