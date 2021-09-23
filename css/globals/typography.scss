@@ -1,4 +1,9 @@
-@use '../util/index' as *;
+@use "../util/index" as *;
+
+:root {
+	--base-font: "Open Sans", sans-serif;
+	--title-font: "Raleway", sans-serif;
+}
 
 .service__title {
 	font-family: "Raleway", sans-serif;
@@ -11,35 +16,39 @@
 	// line-height: 24px;
 }
 
-.body_text-14 {
-	font-family: "Open Sans", sans-serif;
+// .body_text-14 {
+// 	font-family: "Open Sans", sans-serif;
+// 	font-weight: normal;
+// 	font-size: rem(14);
+// 	line-height: 21px;
+// 	// text-align: center;
+// 	// font-size: 16px;
+// 	// line-height: 24px;
+// 	// text-align: left;
+// }
+
+.text-1 {
 	font-weight: normal;
 	font-size: rem(14);
 	line-height: 21px;
-	// text-align: center;
-	// font-size: 16px;
-	// line-height: 24px;
-	// text-align: left;
 }
 
-.testimonial__name {
-	font-family: "Open Sans", sans-serif;
-	font-weight: bold;
-	font-size: rem(10);
-	line-height: 12px;
-	letter-spacing: 0.5px;
-	margin-bottom: 5px;
+.testimonial {
+	&__name {
+		font-weight: bold;
+		font-size: rem(10);
+		line-height: 12px;
+		letter-spacing: 0.5px;
+		margin-bottom: 5px;
+	}
+	&__job {
+		font-weight: normal;
+		font-size: rem(8);
+		line-height: 10px;
+		letter-spacing: 0.5px;
+	}
 }
 
-.testimonial__job {
-	font-family: "Open Sans", sans-serif;
-	font-weight: normal;
-	font-size: rem(8);
-	line-height: 10px;
-	letter-spacing: 0.5px;
-}
-
-.productive__text,
 .productive__links {
 	font-family: "Open Sans", sans-serif;
 	font-weight: normal;
@@ -55,12 +64,28 @@
 		font-weight: bold;
 	}
 }
+.productive {
+	&__title {
+		font-family: var(--title-font);
+		font-weight: bold;
+		font-size: rem(18);
+		line-height: 24px;
+	}
+	&__text {
+		font-weight: normal;
+		font-size: rem(14);
+		line-height: 24px;
+	}
 
-.productive__title {
-	font-family: "Raleway", sans-serif;
-	font-weight: bold;
-	font-size: rem(40);
-	line-height: 50px;
+	@include breakpoint(small) {
+		&__title {
+			font-size: rem(40);
+			line-height: 50px;
+		}
+		&__text {
+			font-size: rem(16);
+		}
+	}
 }
 
 .newsletter__title {
@@ -83,12 +108,9 @@
 }
 
 .link {
-	/* check border botom  */
 	&--blue {
-		font-family: "Open Sans", sans-serif;
 		text-decoration: none;
-		font-size: rem(16);
-		line-height: 22px;
+		font-size: rem(12);
 		display: inline-block;
 		border-bottom: 1px solid;
 		padding-bottom: 5px;
@@ -96,9 +118,16 @@
 
 		&:hover {
 			color: var(--white);
+
+			// arrow icon
 			[fill="#62E0D9"] {
 				fill: var(--white);
 			}
+		}
+
+		@include breakpoint(small) {
+			font-size: rem(16);
+			line-height: 22px;
 		}
 	}
 }

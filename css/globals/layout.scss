@@ -1,19 +1,42 @@
-@use '../util/index' as *;
+@use "../util/index" as *;
 
+// General container styles
 .container {
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
+
+	// Specific container styles
+	&--productive {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: space-between;
+		justify-content: center;
+		align-items: center;
+		padding: 0 25px;
+		gap: 50px 60px;
+
+		@include breakpoint(medium) {
+			flex-direction: row;
+		}
+
+		@include breakpoint(productive) {
+			padding: 0;
+			max-width: 1235px;
+		}
+	}
 
 	&--testimonials {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 25px 40px;
 		justify-content: center;
-		margin-top: 40px;
 		padding: 0 45px;
+		margin-top: 120px;
+		margin-bottom: 200px;
 
-		@include breakpoint(test) {
+		@include breakpoint(testimonials) {
 			padding: 0;
 			max-width: 1160px;
 		}
@@ -30,24 +53,6 @@
 		justify-content: space-between;
 		gap: 80px 0;
 	}
-
-	&__productive {
-		max-width: 1235px;
-		margin: auto;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		align-items: center;
-	}
-}
-
-.productive__img {
-	width: 50%;
-	max-width: 615px;
-}
-.productive__content {
-	width: 50%;
-	max-width: 565px;
 }
 .newsletter {
 	margin-left: auto;

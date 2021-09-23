@@ -7,6 +7,7 @@
 body {
   color: var(--white);
   background-color: var(--main-blue);
+  font-family: var(--base-font);
 }
 
 img {
@@ -46,7 +47,7 @@ img {
   --white: hsl(0, 0%, 100%);
   --light-red: hsl(0, 100%, 63%);
   --footer-blue: hsl(216, 53%, 9%);
-  --testimonials-blue: hsl(219, 30%, 18%);
+  --card-blue: hsl(219, 30%, 18%);
   --email-blue: hsl(217, 28%, 15%);
   --main-blue: hsl(218, 28%, 13%);
   --link-blue: hsla(177, 67%, 63%);
@@ -59,13 +60,35 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+.container--productive {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+  gap: 50px 60px;
+}
+@media (min-width: 43.125em) {
+  .container--productive {
+    flex-direction: row;
+  }
+}
+@media (min-width: 80.3125em) {
+  .container--productive {
+    padding: 0;
+    max-width: 1235px;
+  }
+}
 .container--testimonials {
   display: flex;
   flex-wrap: wrap;
   gap: 25px 40px;
   justify-content: center;
-  margin-top: 40px;
   padding: 0 45px;
+  margin-top: 120px;
+  margin-bottom: 200px;
 }
 @media (min-width: 78.125em) {
   .container--testimonials {
@@ -82,24 +105,6 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 80px 0;
-}
-.container__productive {
-  max-width: 1235px;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.productive__img {
-  width: 50%;
-  max-width: 615px;
-}
-
-.productive__content {
-  width: 50%;
-  max-width: 565px;
 }
 
 .newsletter {
@@ -161,6 +166,11 @@ footer {
   padding: 55px 80px 55px 120px;
 }
 
+:root {
+  --base-font: "Open Sans", sans-serif;
+  --title-font: "Raleway", sans-serif;
+}
+
 .service__title {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
@@ -168,31 +178,26 @@ footer {
   line-height: 23px;
 }
 
-.body_text-14 {
-  font-family: "Open Sans", sans-serif;
+.text-1 {
   font-weight: normal;
   font-size: 0.875rem;
   line-height: 21px;
 }
 
 .testimonial__name {
-  font-family: "Open Sans", sans-serif;
   font-weight: bold;
   font-size: 0.625rem;
   line-height: 12px;
   letter-spacing: 0.5px;
   margin-bottom: 5px;
 }
-
 .testimonial__job {
-  font-family: "Open Sans", sans-serif;
   font-weight: normal;
   font-size: 0.5rem;
   line-height: 10px;
   letter-spacing: 0.5px;
 }
 
-.productive__text,
 .productive__links {
   font-family: "Open Sans", sans-serif;
   font-weight: normal;
@@ -208,10 +213,24 @@ footer {
 }
 
 .productive__title {
-  font-family: "Raleway", sans-serif;
+  font-family: var(--title-font);
   font-weight: bold;
-  font-size: 2.5rem;
-  line-height: 50px;
+  font-size: 1.125rem;
+  line-height: 24px;
+}
+.productive__text {
+  font-weight: normal;
+  font-size: 0.875rem;
+  line-height: 24px;
+}
+@media (min-width: 25em) {
+  .productive__title {
+    font-size: 2.5rem;
+    line-height: 50px;
+  }
+  .productive__text {
+    font-size: 1rem;
+  }
 }
 
 .newsletter__title {
@@ -233,14 +252,9 @@ footer {
   visibility: hidden;
 }
 
-.link {
-  /* check border botom  */
-}
 .link--blue {
-  font-family: "Open Sans", sans-serif;
   text-decoration: none;
-  font-size: 1rem;
-  line-height: 22px;
+  font-size: 0.75rem;
   display: inline-block;
   border-bottom: 1px solid;
   padding-bottom: 5px;
@@ -251,6 +265,12 @@ footer {
 }
 .link--blue:hover [fill="#62E0D9"] {
   fill: var(--white);
+}
+@media (min-width: 25em) {
+  .link--blue {
+    font-size: 1rem;
+    line-height: 22px;
+  }
 }
 
 .fab {
@@ -364,8 +384,37 @@ footer {
   text-align: center;
 }
 
+.productive__img {
+  flex-basis: auto;
+  flex-grow: 1;
+  max-width: 615px;
+}
+.productive__content {
+  flex-basis: auto;
+  flex-grow: 1;
+  max-width: 565px;
+}
+@media (min-width: 25em) {
+  .productive__img {
+    flex-basis: 320px;
+  }
+  .productive__content {
+    flex-basis: 320px;
+  }
+}
+@media (min-width: 43.125em) {
+  .productive__img {
+    width: 50%;
+    max-width: 615px;
+  }
+  .productive__content {
+    width: 50%;
+    max-width: 565px;
+  }
+}
+
 .testimonial {
-  background-color: var(--testimonials-blue);
+  background-color: var(--card-blue);
   border-radius: 5px;
   padding: 40px 25px 25px;
   flex-grow: 1;
@@ -375,11 +424,10 @@ footer {
 }
 .testimonial__img {
   display: inline-block;
-  width: 24px;
+  width: 30px;
   margin-right: 10px;
 }
 .testimonial__img img {
-  vertical-align: baseline;
   border-radius: 50%;
 }
 .testimonial__info {
