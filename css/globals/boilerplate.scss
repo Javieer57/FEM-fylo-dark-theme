@@ -1,5 +1,6 @@
-@use '../util/index' as *;
+@use "../util/index" as *;
 
+// Default styles
 * {
 	margin: 0;
 	padding: 0;
@@ -9,12 +10,17 @@
 body {
 	color: var(--white);
 	background-color: var(--main-blue);
-	font-family: var(--base-font);
+	font-family: var(--text-font);
 }
 
 img {
 	max-width: 100%;
 	vertical-align: bottom;
+}
+
+.mx-auto {
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .mb-5 {

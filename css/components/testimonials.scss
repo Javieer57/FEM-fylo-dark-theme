@@ -1,5 +1,6 @@
-@use '../util/index' as *;
+@use "../util/index" as *;
 
+// Testimonial card
 .testimonial {
 	background-color: var(--card-blue);
 	border-radius: 5px;
@@ -24,6 +25,7 @@
 	}
 }
 
+// Position quotes image
 #first-testimonial {
 	&::after {
 		background-image: url("/images/bg-quotes.png");

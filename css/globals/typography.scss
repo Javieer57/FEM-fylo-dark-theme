@@ -1,40 +1,64 @@
 @use "../util/index" as *;
 
+// Fonts variables
 :root {
-	--base-font: "Open Sans", sans-serif;
+	--text-font: "Open Sans", sans-serif;
 	--title-font: "Raleway", sans-serif;
 }
 
-// .body_text-14 {
-// 	font-family: "Open Sans", sans-serif;
-// 	font-weight: normal;
-// 	font-size: rem(14);
-// 	line-height: 21px;
-// 	// text-align: center;
-// 	// font-size: 16px;
-// 	// line-height: 24px;
-// 	// text-align: left;
-// }
+// Text styles
+.text {
+	&--14 {
+		font-size: rem(14);
+		line-height: 21px;
+	}
 
-.text-1 {
-	font-weight: normal;
-	font-size: rem(14);
-	line-height: 21px;
-}
-
-.testimonial {
-	&__name {
-		font-weight: bold;
+	&--10 {
 		font-size: rem(10);
 		line-height: 12px;
 		letter-spacing: 0.5px;
-		margin-bottom: 5px;
 	}
-	&__job {
+
+	&--8 {
 		font-weight: normal;
 		font-size: rem(8);
 		line-height: 10px;
 		letter-spacing: 0.5px;
+	}
+
+	@include breakpoint(small) {
+		&--sm-16 {
+			font-size: rem(16);
+			line-height: 24px;
+		}
+
+		&--sm-14 {
+			font-size: rem(14);
+			line-height: 21px;
+		}
+	}
+}
+
+// Titles styles
+.title {
+	&--18 {
+		font-family: var(--title-font);
+		font-weight: bold;
+		line-height: 24px;
+		font-size: rem(18);
+	}
+
+	@include breakpoint(small) {
+		&--sm-40 {
+			font-family: var(--title-font);
+			font-size: rem(40);
+			line-height: 50px;
+		}
+
+		&--sm-20 {
+			font-family: var(--title-font);
+			font-size: rem(20);
+		}
 	}
 }
 
@@ -51,29 +75,6 @@
 .productive__links {
 	&:active {
 		font-weight: bold;
-	}
-}
-.productive {
-	&__title {
-		font-family: var(--title-font);
-		font-weight: bold;
-		font-size: rem(18);
-		line-height: 24px;
-	}
-	&__text {
-		font-weight: normal;
-		font-size: rem(14);
-		line-height: 24px;
-	}
-
-	@include breakpoint(small) {
-		&__title {
-			font-size: rem(40);
-			line-height: 50px;
-		}
-		&__text {
-			font-size: rem(16);
-		}
 	}
 }
 

@@ -7,12 +7,17 @@
 body {
   color: var(--white);
   background-color: var(--main-blue);
-  font-family: var(--base-font);
+  font-family: var(--text-font);
 }
 
 img {
   max-width: 100%;
   vertical-align: bottom;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .mb-5 {
@@ -177,28 +182,52 @@ footer {
 }
 
 :root {
-  --base-font: "Open Sans", sans-serif;
+  --text-font: "Open Sans", sans-serif;
   --title-font: "Raleway", sans-serif;
 }
 
-.text-1 {
-  font-weight: normal;
+.text--14 {
   font-size: 0.875rem;
   line-height: 21px;
 }
-
-.testimonial__name {
-  font-weight: bold;
+.text--10 {
   font-size: 0.625rem;
   line-height: 12px;
   letter-spacing: 0.5px;
-  margin-bottom: 5px;
 }
-.testimonial__job {
+.text--8 {
   font-weight: normal;
   font-size: 0.5rem;
   line-height: 10px;
   letter-spacing: 0.5px;
+}
+@media (min-width: 25em) {
+  .text--sm-16 {
+    font-size: 1rem;
+    line-height: 24px;
+  }
+  .text--sm-14 {
+    font-size: 0.875rem;
+    line-height: 21px;
+  }
+}
+
+.title--18 {
+  font-family: var(--title-font);
+  font-weight: bold;
+  line-height: 24px;
+  font-size: 1.125rem;
+}
+@media (min-width: 25em) {
+  .title--sm-40 {
+    font-family: var(--title-font);
+    font-size: 2.5rem;
+    line-height: 50px;
+  }
+  .title--sm-20 {
+    font-family: var(--title-font);
+    font-size: 1.25rem;
+  }
 }
 
 .productive__links {
@@ -213,27 +242,6 @@ footer {
 
 .productive__links:active {
   font-weight: bold;
-}
-
-.productive__title {
-  font-family: var(--title-font);
-  font-weight: bold;
-  font-size: 1.125rem;
-  line-height: 24px;
-}
-.productive__text {
-  font-weight: normal;
-  font-size: 0.875rem;
-  line-height: 24px;
-}
-@media (min-width: 25em) {
-  .productive__title {
-    font-size: 2.5rem;
-    line-height: 50px;
-  }
-  .productive__text {
-    font-size: 1rem;
-  }
 }
 
 .newsletter__title {
@@ -392,25 +400,8 @@ footer {
   width: 104px;
   height: 104px;
   display: flex;
-  margin: auto;
-  margin-bottom: 15px;
   justify-content: center;
   align-items: center;
-}
-.service__title {
-  font-family: "Raleway", sans-serif;
-  font-weight: bold;
-  line-height: 24px;
-  font-size: 1.125rem;
-}
-.service__text {
-  font-size: 0.875rem;
-  line-height: 21px;
-}
-@media (min-width: 25em) {
-  .service__title {
-    font-size: 1.25rem;
-  }
 }
 
 .productive__img {

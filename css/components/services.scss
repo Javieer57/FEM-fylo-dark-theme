@@ -11,29 +11,7 @@
 		width: 104px;
 		height: 104px;
 		display: flex;
-		margin: auto;
-		margin-bottom: 15px;
 		justify-content: center;
 		align-items: center;
-	}
-
-	&__title {
-		font-family: "Raleway", sans-serif;
-		font-weight: bold;
-		// font-size: rem(20);
-		line-height: 24px;
-		// * Mobil
-		font-size: rem(18);
-	}
-
-	&__text {
-		font-size: rem(14);
-		line-height: 21px;
-	}
-
-	@include breakpoint(small) {
-		&__title {
-			font-size: rem(20);
-		}
 	}
 }
