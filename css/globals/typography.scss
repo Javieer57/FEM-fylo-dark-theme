@@ -48,6 +48,12 @@
 		font-size: rem(18);
 	}
 
+	&--12 {
+		font-family: var(--title-font);
+		font-size: rem(12);
+		line-height: 14px;
+	}
+
 	@include breakpoint(small) {
 		&--sm-40 {
 			font-family: var(--title-font);
@@ -65,6 +71,13 @@
 		&--sm-20 {
 			font-family: var(--title-font);
 			font-size: rem(20);
+			line-height: 23px;
+		}
+
+		&--sm-16 {
+			font-family: var(--title-font);
+			font-size: rem(16);
+			line-height: 19px;
 		}
 	}
 }

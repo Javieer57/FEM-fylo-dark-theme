@@ -2,7 +2,8 @@
 
 // 400px , 690px , 950px , 1400px
 $breakpoints-up: (
-	"small": "25em",
+	"small": "26.1875em",
+	"header-break": "34.125em",
 	"medium": "43.125em",
 	"services-layout": "43.75em",
 	"newsletter": "56.4375em",
@@ -10,6 +11,7 @@ $breakpoints-up: (
 	"large": "59.375em",
 	"testimonials": "78.125em",
 	"productive": "80.3125em",
+	"header": "82.5em",
 	"xlarge": "87.5em",
 );
 
