@@ -8,8 +8,6 @@
 
 	// Specific container styles
 	&--services {
-		margin-left: auto;
-		margin-right: auto;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
@@ -60,25 +58,13 @@
 			max-width: 1160px;
 		}
 	}
-}
-.newsletter {
-	margin-left: auto;
-	margin-right: auto;
-	padding: 40px 75px;
-	background-color: var(--email-blue);
-	max-width: 863px;
-	border-radius: 10px;
-}
-.newsletter__content {
-	max-width: 709px;
-	text-align: center;
-}
 
-.newsletter__inputs {
-	display: flex;
-	gap: 30px;
-	// flex-wrap: wrap;
-	justify-content: space-between;
+	&--newsletter {
+		padding: 0 20px;
+		@include breakpoint(newsletter) {
+			padding: 0;
+		}
+	}
 }
 
 .direction {

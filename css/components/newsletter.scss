@@ -1,0 +1,47 @@
+@use "../util/index" as *;
+
+.newsletter {
+	background-color: var(--newsletter-blue);
+	padding: 40px 25px;
+	max-width: 863px;
+	border-radius: 10px;
+	text-align: center;
+
+	&__inputs {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 30px;
+		justify-content: space-between;
+	}
+
+	&__mail {
+		padding: 15px 40px;
+		font-family: "Open Sans", sans-serif;
+		font-weight: normal;
+		font-size: rem(12);
+		line-height: 16px;
+		border-radius: 25px;
+		border: none;
+		width: 100%;
+	}
+
+	.btn--blue {
+		width: 100%;
+	}
+
+	@include breakpoint(medium) {
+		padding: 40px 75px;
+
+		&__mail {
+			flex-basis: 200px;
+			max-width: 480px;
+			flex-grow: 1;
+		}
+
+		.btn--blue {
+			flex-basis: 200px;
+			max-width: 200px;
+			flex-grow: 1;
+		}
+	}
+}

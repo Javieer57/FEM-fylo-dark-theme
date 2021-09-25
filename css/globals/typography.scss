@@ -55,6 +55,13 @@
 			line-height: 50px;
 		}
 
+		&--sm-32 {
+			font-family: var(--title-font);
+			font-weight: bold;
+			font-size: rem(32);
+			line-height: 48px;
+		}
+
 		&--sm-20 {
 			font-family: var(--title-font);
 			font-size: rem(20);
