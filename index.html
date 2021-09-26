@@ -23,6 +23,9 @@
 			crossorigin="anonymous"
 		/>
 
+		<!-- Feather Icons -->
+		<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
 		<!-- Styles -->
 		<link rel="stylesheet" href="css/styles.css" />
 
@@ -42,7 +45,7 @@
 	</head>
 
 	<body>
-		<!-- <header class="container container--header">
+		<!-- <header class="container container--header mb-75">
 			<div class="header__img"><img src="images/logo.svg" alt="" aria-hidden="true" /></div>
 
 			<nav class="header__nav">
@@ -50,184 +53,185 @@
 				<a class="title--12 title--sm-16 header__link" href="javascript:;">Team</a>
 				<a class="title--12 title--sm-16 header__link" href="javascript:;">Sign In</a>
 			</nav>
-		</header> -->
+		</header>
 
-		<section class="container container--hero">
-			<div class="hero">
-				<div class="hero__img mb-35">
-					<img src="images/illustration-intro.png" alt="" />
+		<main>
+			<section class="container container--hero" style="padding-bottom: 150px">
+				<div class="hero mx-auto">
+					<div class="hero__img mb-35">
+						<img src="images/illustration-intro.png" alt="" />
+					</div>
+					<div class="hero__content">
+						<h1 class="title--18 title--sm-40 mb-30">All your files in one secure location, accessible anywhere.</h1>
+						<p class="text--14 text--sm-18 mb-30">
+							Fylo stores all your most important files in one secure location. Access them wherever you need, share and collaborate with friends family, and
+							co-workers.
+						</p>
+						<button class="btn--blue">Get Started</button>
+					</div>
 				</div>
-				<div class="hero__content">
-					<h1 class="title--18 title--sm-40 mb-30">All your files in one secure location, accessible anywhere.</h1>
-					<p class="text--14 text--sm-18 mb-30">
-						Fylo stores all your most important files in one secure location. Access them wherever you need, share and collaborate with friends family, and co-workers.
+			</section>
+			<section class="container container--services mb-150">
+				<div class="service">
+					<div class="service__img mx-auto mb-15">
+						<img src="images/icon-access-anywhere.svg" alt="" aria-hidden="true" />
+					</div>
+					<h3 class="title--18 title--sm-20 mb-10">Access your files, anywhere</h3>
+					<p class="text--14">The ability to use a smartphone, tablet, or computer to access your account means your files follow you everywhere.</p>
+				</div>
+				<div class="service">
+					<div class="service__img mx-auto mb-15"><img src="images/icon-security.svg" alt="" aria-hidden="true" /></div>
+					<h3 class="title--18 title--sm-20 mb-10">Security you can trust</h3>
+					<p class="text--14">2-factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files.</p>
+				</div>
+				<div class="service">
+					<div class="service__img mx-auto mb-15"><img src="images/icon-collaboration.svg" alt="" aria-hidden="true" /></div>
+					<h3 class="title--18 title--sm-20 mb-10">Real-time collaboration</h3>
+					<p class="text--14">Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.</p>
+				</div>
+				<div class="service">
+					<div class="service__img mx-auto mb-15"><img src="images/icon-any-file.svg" alt="" aria-hidden="true" /></div>
+					<h3 class="title--18 title--sm-20 mb-10">Store any type of file</h3>
+					<p class="text--14">
+						Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely stored and shared.
 					</p>
-					<button class="btn--blue">Get Started</button>
 				</div>
-			</div>
-		</section>
-		<!-- <div>
-			
-		</div> -->
-
-		<!-- <section class="container container--services mb-150">
-			<div class="service">
-				<div class="service__img mx-auto mb-15">
-					<img src="images/icon-access-anywhere.svg" alt="" aria-hidden="true" />
+			</section>
+			<section class="container container--productive" style="margin-bottom: 120px">
+				<div class="productive__img">
+					<img src="images/illustration-stay-productive.png" alt="" aria-hidden="true" />
 				</div>
-				<h3 class="title--18 title--sm-20 mb-10">Access your files, anywhere</h3>
-				<p class="text--14">The ability to use a smartphone, tablet, or computer to access your account means your files follow you everywhere.</p>
-			</div>
-
-			<div class="service">
-				<div class="service__img mx-auto mb-15"><img src="images/icon-security.svg" alt="" aria-hidden="true" /></div>
-				<h3 class="title--18 title--sm-20 mb-10">Security you can trust</h3>
-				<p class="text--14">2-factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files.</p>
-			</div>
-			<div class="service">
-				<div class="service__img mx-auto mb-15"><img src="images/icon-collaboration.svg" alt="" aria-hidden="true" /></div>
-				<h3 class="title--18 title--sm-20 mb-10">Real-time collaboration</h3>
-				<p class="text--14">Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.</p>
-			</div>
-			<div class="service">
-				<div class="service__img mx-auto mb-15"><img src="images/icon-any-file.svg" alt="" aria-hidden="true" /></div>
-				<h3 class="title--18 title--sm-20 mb-10">Store any type of file</h3>
-				<p class="text--14">Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely stored and shared.</p>
-			</div>
-		</section>
-
-		<section class="container container--productive" style="margin-bottom: 120px">
-			<div class="productive__img">
-				<img src="images/illustration-stay-productive.png" alt="" aria-hidden="true" />
-			</div>
-			<div class="productive__content">
-				<h2 class="title--18 title--sm-40 mb-20">Stay productive, wherever you are</h2>
-				<p class="text--14 text--sm-16 mb-15">Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs.</p>
-				<p class="text--14 text--sm-16 mb-25">
-					Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.
-				</p>
-				<a class="link--blue" href="javascript:;"
-					>See how Fylo works
-					<span style="vertical-align: middle">
-						<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-							<defs>
-								<circle id="b" cx="6" cy="6" r="6" />
-								<filter x="-25%" y="-25%" width="150%" height="150%" filterUnits="objectBoundingBox" id="a">
-									<feOffset in="SourceAlpha" result="shadowOffsetOuter1" />
-									<feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1" />
-									<feColorMatrix values="0 0 0 0 0.384313725 0 0 0 0 0.878431373 0 0 0 0 0.850980392 0 0 0 0.811141304 0" in="shadowBlurOuter1" />
-								</filter>
-							</defs>
-							<g fill="none" fill-rule="evenodd">
-								<g transform="translate(2 2)">
-									<use fill="#000" filter="url(#a)" xlink:href="#b" />
-									<use fill="#62E0D9" xlink:href="#b" />
-								</g>
-								<path d="M8.582 6l-.363.35 1.452 1.4H5.333v.5h4.338L8.22 9.65l.363.35 2.074-2z" fill="#1B2330" />
-							</g></svg></span
-				></a>
-			</div>
-		</section>
-
-		<section class="container container--testimonials">
-			<div class="testimonial" id="first-testimonial">
-				<p class="text--10 text--sm-14 mb-25">
-					Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.
-				</p>
-
-				<div class="testimonial__details">
-					<div class="testimonial__img">
-						<img src="images/profile-1.jpg" alt="Satish Patel" />
-					</div>
-					<div class="testimonial__info">
-						<h4 class="text--10 mb-5">Satish Patel</h4>
-						<h5 class="text--8">Founder & CEO, Huddle</h5>
+				<div class="productive__content">
+					<h2 class="title--18 title--sm-40 mb-20">Stay productive, wherever you are</h2>
+					<p class="text--14 text--sm-16 mb-15">Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs.</p>
+					<p class="text--14 text--sm-16 mb-25">
+						Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.
+					</p>
+					<a class="link--blue" href="javascript:;"
+						>See how Fylo works
+						<span style="vertical-align: middle">
+							<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+								<defs>
+									<circle id="b" cx="6" cy="6" r="6" />
+									<filter x="-25%" y="-25%" width="150%" height="150%" filterUnits="objectBoundingBox" id="a">
+										<feOffset in="SourceAlpha" result="shadowOffsetOuter1" />
+										<feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1" />
+										<feColorMatrix values="0 0 0 0 0.384313725 0 0 0 0 0.878431373 0 0 0 0 0.850980392 0 0 0 0.811141304 0" in="shadowBlurOuter1" />
+									</filter>
+								</defs>
+								<g fill="none" fill-rule="evenodd">
+									<g transform="translate(2 2)">
+										<use fill="#000" filter="url(#a)" xlink:href="#b" />
+										<use fill="#62E0D9" xlink:href="#b" />
+									</g>
+									<path d="M8.582 6l-.363.35 1.452 1.4H5.333v.5h4.338L8.22 9.65l.363.35 2.074-2z" fill="#1B2330" />
+								</g></svg></span
+					></a>
+				</div>
+			</section>
+			<section class="container container--testimonials">
+				<div class="testimonial" id="first-testimonial">
+					<p class="text--10 text--sm-14 mb-25">
+						Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.
+					</p>
+					<div class="testimonial__details">
+						<div class="testimonial__img">
+							<img src="images/profile-1.jpg" alt="Satish Patel" />
+						</div>
+						<div class="testimonial__info">
+							<h4 class="text--10 mb-5">Satish Patel</h4>
+							<h5 class="text--8">Founder & CEO, Huddle</h5>
+						</div>
 					</div>
 				</div>
-			</div>
-
-			<div class="testimonial">
-				<p class="text--10 text--sm-14 mb-25">
-					Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.
-				</p>
-
-				<div class="testimonial__details">
-					<div class="testimonial__img">
-						<img src="images/profile-2.jpg" alt="Bruce McKenzie" />
-					</div>
-					<div class="testimonial__info">
-						<h4 class="text--10 mb-5">Bruce McKenzie</h4>
-						<h5 class="text--8">Founder & CEO, Huddle</h5>
+				<div class="testimonial">
+					<p class="text--10 text--sm-14 mb-25">
+						Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.
+					</p>
+					<div class="testimonial__details">
+						<div class="testimonial__img">
+							<img src="images/profile-2.jpg" alt="Bruce McKenzie" />
+						</div>
+						<div class="testimonial__info">
+							<h4 class="text--10 mb-5">Bruce McKenzie</h4>
+							<h5 class="text--8">Founder & CEO, Huddle</h5>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="testimonial">
-				<p class="text--10 text--sm-14 mb-25">
-					Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.
-				</p>
-
-				<div class="testimonial__details">
-					<div class="testimonial__img">
-						<img src="images/profile-3.jpg" alt="Iva Boyd" />
+				<div class="testimonial">
+					<p class="text--10 text--sm-14 mb-25">
+						Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.
+					</p>
+					<div class="testimonial__details">
+						<div class="testimonial__img">
+							<img src="images/profile-3.jpg" alt="Iva Boyd" />
+						</div>
+						<div class="testimonial__info">
+							<h4 class="text--10 mb-5">Iva Boyd</h4>
+							<h5 class="text--8">Founder & CEO, Huddle</h5>
+						</div>
 					</div>
-					<div class="testimonial__info">
-						<h4 class="text--10 mb-5">Iva Boyd</h4>
-						<h5 class="text--8">Founder & CEO, Huddle</h5>
+				</div>
+			</section>
+			<section class="container container--newsletter">
+				<div class="newsletter mx-auto">
+					<h2 class="title--18 title--sm-32 mb-15">Get early access today</h2>
+					<p class="text--14 mb-40">
+						It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.
+					</p>
+					<div class="newsletter__inputs mb-5">
+						<input class="newsletter__mail" type="email" name="" id="" placeholder="email@example.com" />
+						<input class="btn--blue" type="submit" value="Get Started For Free" />
+					</div>
+					<p class="newsletter__error">Error, please check your email</p>
+				</div>
+			</section>
+		</main> -->
+
+		<footer class="footer">
+			<div class="container container--footer">
+				<div class="footer__address">
+					<i class="fas fa-map-marker-alt"></i>
+
+					<p class="text--16">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+				</div>
+
+				<div class="footer__contact">
+					<p class="text--14 mb-15"><i class="fas fa-phone-alt"></i>+1-543-123-4567</p>
+					<p class="text--14"><i class="far fa-envelope"></i>example@fylo.com</p>
+				</div>
+
+				<div class="footer__navlinks">
+					<div class="footer__navlinks-column mb-40">
+						<a class="text--16 mb-15" href="javascript:;">About Us</a>
+						<a class="text--16 mb-15" href="javascript:;">Jobs</a>
+						<a class="text--16 mb-15" href="javascript:;">Press</a>
+						<a class="text--16" href="javascript:;">Blog</a>
+					</div>
+					<div class="footer__navlinks-column">
+						<a class="text--16 mb-15" href="javascript:;">Contact Us</a>
+						<a class="text--16 mb-15" href="javascript:;">Terms</a>
+						<a class="text--16" href="javascript:;">Privacy</a>
 					</div>
 				</div>
-			</div>
-		</section> -->
 
-		<!-- <section class="container container--newsletter">
-			<div class="newsletter mx-auto">
-				<h2 class="title--18 title--sm-32 mb-15">Get early access today</h2>
-				<p class="text--14 mb-40">
-					It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.
-				</p>
-
-				<div class="newsletter__inputs mb-5">
-					<input class="newsletter__mail" type="email" name="" id="" placeholder="email@example.com" />
-
-					<input class="btn--blue" type="submit" value="Get Started For Free" />
-				</div>
-				<p class="newsletter__error">Error, please check your email</p>
-			</div>
-		</section> -->
-
-		<!-- <footer>
-			<div class="direction">
-				<span><i class="fas fa-map-marker-alt"></i></span>
-				<p class="productive__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-			</div>
-
-			<div class="contact">
-				<div class="contact__phone">
-					<span><i class="fas fa-phone-alt"></i></span>
-					<p class="body_text--144">+1-543-123-4567</p>
-				</div>
-				<div class="contact__phone">
-					<span><i class="far fa-envelope"></i></span>
-					<p class="body_text--144">example@fylo.com</p>
+				<div class="footer__social">
+					<a aria-label="facebook" href="javascript:;" class="footer__social-icon">
+						<i data-feather="facebook"></i>
+					</a>
+					<a aria-label="twitter" href="javascript:;" class="footer__social-icon">
+						<i data-feather="twitter"></i>
+					</a>
+					<a aria-label="instagram" href="javascript:;" class="footer__social-icon">
+						<i data-feather="instagram"></i>
+					</a>
 				</div>
 			</div>
-			<div class="footer__navlinks">
-				<div class="footer__navlinks1">
-					<a class="productive__links" href="javascript:;">About Us</a>
-					<a class="productive__links" href="javascript:;">Jobs</a>
-					<a class="productive__links" href="javascript:;">Press</a>
-					<a class="productive__links" href="javascript:;">Blog</a>
-				</div>
-				<div class="footer__navlinks2">
-					<a class="productive__links" href="javascript:;">Contact Us</a>
-					<a class="productive__links" href="javascript:;">Terms</a>
-					<a class="productive__links" href="javascript:;">Privacy</a>
-				</div>
-			</div>
+		</footer>
 
-			<span class="footer__social"><i class="fab fa-facebook-f"></i></span>
-			<span class="footer__social"><i class="fab fa-twitter"></i></span>
-			<span class="footer__social"><i class="fab fa-instagram"></i></span>
-		</footer> -->
+		<script>
+			feather.replace();
+		</script>
 
 		<!-- <p class="attribution">
 				Challenge by

@@ -9,7 +9,7 @@
 
 body {
 	color: var(--white);
-	background-color: var(--main-blue);
+	background-image: linear-gradient(180deg, var(--secondary-blue) 0%, var(--secondary-blue) 20%, var(--main-blue) 21%, var(--main-blue) 100%);
 	font-family: var(--text-font);
 }
 
@@ -58,6 +58,10 @@ a {
 
 .mb-40 {
 	margin-bottom: rem(40);
+}
+
+.mb-75 {
+	margin-bottom: rem(75);
 }
 
 .mb-150 {

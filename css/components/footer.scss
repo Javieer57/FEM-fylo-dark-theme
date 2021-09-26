@@ -1,0 +1,89 @@
+@use "../util/index" as *;
+
+.footer {
+	background-color: var(--footer-blue);
+
+	&__address {
+		flex-grow: 1;
+		flex-basis: 320px;
+		max-width: 380px;
+		display: flex;
+
+		// location icon
+		.fas {
+			display: inline-block;
+			padding: 8px;
+			margin-right: 15px;
+		}
+	}
+
+	&__contact {
+		flex-grow: 1;
+		flex-basis: 180px;
+		max-width: 180px;
+
+		// contact icons
+		.fas,
+		.far {
+			font-size: 24px;
+			margin-right: 25px;
+			vertical-align: middle;
+		}
+	}
+
+	&__navlinks {
+		display: flex;
+		flex-grow: 1;
+		flex-basis: 240px;
+		max-width: 240px;
+		justify-content: space-between;
+
+		&-column {
+			flex-grow: 1;
+			flex-basis: 90px;
+			max-width: 90px;
+			display: flex;
+			align-items: start;
+			flex-direction: column;
+
+			a {
+				display: inline-block;
+
+				&:hover {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+
+	&__social {
+		&-icon {
+			border-radius: 50%;
+			border: 1px solid var(--white);
+			cursor: pointer;
+			display: inline-block;
+			padding: 20px;
+			position: relative;
+
+			&:not(:last-child) {
+				margin-right: 12px;
+			}
+
+			.feather {
+				color: var(--white);
+				left: 50%;
+				position: absolute;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
+
+			&:hover {
+				border: 1px solid var(--link-blue);
+
+				.feather {
+					color: var(--link-blue);
+				}
+			}
+		}
+	}
+}

@@ -1,11 +1,12 @@
 @use "../util/index" as *;
 
 .newsletter {
-	background-color: var(--newsletter-blue);
+	background-color: var(--secondary-blue);
 	padding: 40px 25px;
 	max-width: 863px;
 	border-radius: 10px;
 	text-align: center;
+	box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
 
 	&__inputs {
 		display: flex;
