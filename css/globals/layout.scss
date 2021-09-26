@@ -21,6 +21,17 @@
 			padding: 0;
 		}
 	}
+
+	&--hero {
+		text-align: center;
+		padding: 0 25px;
+		max-width: 720px;
+
+		@include breakpoint(hero) {
+			padding: 0;
+		}
+	}
+
 	&--services {
 		display: flex;
 		flex-wrap: wrap;

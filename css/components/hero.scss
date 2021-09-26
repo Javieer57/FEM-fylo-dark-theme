@@ -1,0 +1,24 @@
+@use "../util/index" as *;
+
+.hero {
+	&__content {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		p {
+			max-width: 589px;
+		}
+	}
+
+	.btn--blue {
+		flex-grow: 1;
+		flex-basis: 240px;
+		max-width: 280px;
+		font-size: rem(14);
+
+		@include breakpoint(small) {
+			font-size: rem(16);
+		}
+	}
+}

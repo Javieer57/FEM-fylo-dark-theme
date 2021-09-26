@@ -2,7 +2,9 @@
 
 .header {
 	&__img {
-		max-width: 80px;
+		max-width: 180px;
+		flex-basis: 80px;
+		flex-grow: 1;
 		min-width: 80px;
 	}
 
@@ -19,18 +21,7 @@
 		}
 	}
 
-	@include breakpoint(header-break) {
-		&__img {
-			max-width: 180px;
-			min-width: 180px;
-		}
-	}
-
 	@include breakpoint(medium) {
-		// &__img {
-		// 	flex-grow: 1;
-		// 	max-width: 180px;
-		// }
 		&__link {
 			&:not(:last-child) {
 				margin-right: 58px;

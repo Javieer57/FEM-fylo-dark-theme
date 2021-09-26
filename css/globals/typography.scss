@@ -27,6 +27,12 @@
 	}
 
 	@include breakpoint(small) {
+		&--sm-18 {
+			font-size: rem(18);
+			font-size: 20px;
+			line-height: 30px;
+		}
+
 		&--sm-16 {
 			font-size: rem(16);
 			line-height: 24px;
@@ -41,6 +47,13 @@
 
 // Titles styles
 .title {
+	&--18 {
+		font-family: var(--title-font);
+		font-weight: bold;
+		line-height: 36px;
+		font-size: rem(24);
+	}
+
 	&--18 {
 		font-family: var(--title-font);
 		font-weight: bold;
