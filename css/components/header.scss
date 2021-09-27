@@ -1,6 +1,10 @@
 @use "../util/index" as *;
 
 .header {
+	background-color: var(--secondary-blue);
+	padding-top: 25px;
+	padding-bottom: 75px;
+
 	&__img {
 		max-width: 180px;
 		flex-basis: 80px;

@@ -6,7 +6,7 @@
 
 body {
   color: var(--white);
-  background-image: linear-gradient(180deg, var(--secondary-blue) 0%, var(--secondary-blue) 20%, var(--main-blue) 21%, var(--main-blue) 100%);
+  background-color: var(--main-blue);
   font-family: var(--text-font);
 }
 
@@ -87,7 +87,6 @@ ul {
   margin-right: auto;
 }
 .container--header {
-  margin-top: 25px;
   padding: 0 25px;
   display: flex;
   gap: 0 21%;
@@ -355,6 +354,11 @@ ul {
   background-image: none;
 }
 
+.header {
+  background-color: var(--secondary-blue);
+  padding-top: 25px;
+  padding-bottom: 75px;
+}
 .header__img {
   max-width: 180px;
   flex-basis: 80px;
