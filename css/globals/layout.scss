@@ -100,15 +100,23 @@
 	}
 
 	&--footer {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 50px 40px;
 		padding: 0 25px;
-		display: flex;
 		align-items: start;
-		flex-wrap: wrap;
-		justify-content: space-between;
 
 		@include breakpoint(footer) {
 			max-width: 1240px;
 			padding: 0;
+		}
+
+		@media screen and (min-width: 850px) {
+			// Sencillo
+			// grid-template-columns: repeat(4, 1fr);
+			// Complicado
+			justify-content: space-between;
+			grid-template-columns: minmax(auto, 380px) minmax(auto, 170px) minmax(auto, 235px) minmax(auto, 200px);
 		}
 	}
 }
