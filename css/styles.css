@@ -87,15 +87,14 @@ ul {
   margin-right: auto;
 }
 .container--header {
-  padding: 0 25px;
   display: flex;
   gap: 0 21%;
   justify-content: space-between;
   align-items: center;
+  padding: 0 25px;
 }
 @media (min-width: 82.5em) {
   .container--header {
-    margin-top: 70px;
     max-width: 1280px;
     padding: 0;
   }
@@ -356,8 +355,12 @@ ul {
 
 .header {
   background-color: var(--secondary-blue);
-  padding-top: 25px;
-  padding-bottom: 75px;
+  padding: 25px 0 50px;
+}
+@media (min-width: 82.5em) {
+  .header {
+    padding: 75px 0;
+  }
 }
 .header__img {
   max-width: 180px;
