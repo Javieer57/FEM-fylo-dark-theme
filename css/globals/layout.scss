@@ -84,15 +84,17 @@
 		justify-content: center;
 		padding: 0 45px;
 		margin-top: 120px;
-		margin-bottom: 200px;
+		margin-bottom: 160px;
 
 		@include breakpoint(testimonials) {
 			padding: 0;
 			max-width: 1160px;
+			margin-bottom: 200px;
 		}
 	}
 
 	&--newsletter {
+		background-image: linear-gradient(180deg, rgba(24, 31, 43, 1) 0%, rgba(24, 31, 43, 1) 48%, rgba(11, 21, 36, 1) 49%, rgba(11, 21, 36, 1) 100%);
 		padding: 0 20px;
 		@include breakpoint(newsletter) {
 			padding: 0;
@@ -103,12 +105,12 @@
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-gap: 50px 40px;
-		padding: 0 25px;
+		padding: 50px 25px;
 		align-items: start;
 
 		@include breakpoint(footer) {
 			max-width: 1240px;
-			padding: 0;
+			padding: 50px 0;
 		}
 
 		@media screen and (min-width: 850px) {
