@@ -102,7 +102,7 @@ ul {
   }
 }
 .container--hero {
-  background-image: url("/images/bg-curvy-desktop.svg");
+  background-image: url("https://raw.githubusercontent.com/Javieer57/FEM-fylo-dark-theme/main/images/bg-curvy-desktop.svg");
   background-size: contain;
   background-color: var(--secondary-blue);
   background-repeat: no-repeat;
@@ -207,7 +207,7 @@ ul {
   --title-font: "Raleway", sans-serif;
 }
 
-.text--14 {
+.text--16 {
   font-size: 1rem;
   line-height: 24px;
 }
@@ -291,17 +291,6 @@ ul {
   /* links */
   text-decoration: none;
   color: var(--white);
-}
-
-.productive__links:active {
-  font-weight: bold;
-}
-
-.newsletter__title {
-  font-family: "Raleway", sans-serif;
-  font-weight: bold;
-  font-size: 2rem;
-  line-height: 48px;
 }
 
 .newsletter__error {
