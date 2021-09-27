@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://your-solution-url.com)
--   Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-   Solution URL: [Frontend Mentor](https://www.frontendmentor.io/challenges/fylo-dark-theme-landing-page-5ca5f2d21e82137ec91a50fd/hub/fylo-landing-page-using-flexbox-and-css-grid-sMHUWtBLe)
+-   Live Site URL: [Github Page](https://javieer57.github.io/FEM-fylo-dark-theme/)
 
 ## My process
 
