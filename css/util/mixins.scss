@@ -1,0 +1,16 @@
+// Fonts variables in typography file
+// --text-font: "Open Sans", sans-serif;
+// --title-font: "Raleway", sans-serif;
+
+@mixin textTemplate($font-size, $line-height: normal) {
+	font-family: var(--text-font);
+	font-size: $font-size;
+	line-height: $line-height;
+}
+
+@mixin titleTemplate($font-size, $line-height: normal) {
+	font-family: var(--title-font);
+	font-size: $font-size;
+	line-height: $line-height;
+	font-weight: bold;
+}

@@ -9,148 +9,64 @@
 // Text styles
 .text {
 	&--16 {
-		font-size: rem(16);
-		line-height: 24px;
+		@include textTemplate(rem(16), 24px);
 	}
 
 	&--14 {
-		font-size: rem(14);
-		line-height: 21px;
+		@include textTemplate(rem(14), 21px);
 	}
 
 	&--10 {
-		font-size: rem(10);
-		line-height: 12px;
-		letter-spacing: 0.5px;
+		@include textTemplate(rem(10), 12px);
 	}
 
 	&--8 {
-		font-weight: normal;
-		font-size: rem(8);
-		line-height: 10px;
-		letter-spacing: 0.5px;
-	}
-
-	@include breakpoint(small) {
-		&--sm-18 {
-			font-size: rem(18);
-			font-size: 20px;
-			line-height: 30px;
-		}
-
-		&--sm-16 {
-			font-size: rem(16);
-			line-height: 24px;
-		}
-
-		&--sm-14 {
-			font-size: rem(14);
-			line-height: 21px;
-		}
+		@include textTemplate(rem(8), 10px);
 	}
 }
 
 // Titles styles
 .title {
 	&--18 {
-		font-family: var(--title-font);
-		font-weight: bold;
-		line-height: 36px;
-		font-size: rem(24);
-	}
-
-	&--18 {
-		font-family: var(--title-font);
-		font-weight: bold;
-		line-height: 24px;
-		font-size: rem(18);
+		@include titleTemplate(rem(18), 24px);
 	}
 
 	&--12 {
-		font-family: var(--title-font);
-		font-size: rem(12);
-		line-height: 14px;
+		@include titleTemplate(rem(12), 14px);
 	}
+}
 
-	@include breakpoint(small) {
-		&--sm-40 {
-			font-family: var(--title-font);
-			font-size: rem(40);
-			line-height: 50px;
-		}
-
-		&--sm-32 {
-			font-family: var(--title-font);
-			font-weight: bold;
-			font-size: rem(32);
-			line-height: 48px;
-		}
-
-		&--sm-20 {
-			font-family: var(--title-font);
-			font-size: rem(20);
-			line-height: 23px;
+// Text and title styles starting from a small size.
+@include breakpoint(small) {
+	.text {
+		&--sm-18 {
+			@include textTemplate(rem(18), 30px);
 		}
 
 		&--sm-16 {
-			font-family: var(--title-font);
-			font-size: rem(16);
-			line-height: 19px;
+			@include textTemplate(rem(16), 21px);
+		}
+
+		&--sm-14 {
+			@include textTemplate(rem(14), 18px);
 		}
 	}
-}
 
-.productive__links {
-	font-family: "Open Sans", sans-serif;
-	font-weight: normal;
-	font-size: rem(16);
-	line-height: 24px;
-	/* links */
-	text-decoration: none;
-	color: var(--white);
-}
-
-.newsletter__error {
-	font-family: "Open Sans", sans-serif;
-	font-weight: bold;
-	font-size: rem(10);
-	text-align: left;
-	margin-left: 38px;
-	line-height: 14px;
-	color: var(--light-red);
-	/* pendiente */
-	visibility: hidden;
-}
-
-.link {
-	&--blue {
-		text-decoration: none;
-		font-size: rem(12);
-		display: inline-block;
-		border-bottom: 1px solid;
-		padding-bottom: 5px;
-		color: var(--link-blue);
-
-		&:hover {
-			color: var(--white);
-
-			// arrow icon
-			[fill="#62E0D9"] {
-				fill: var(--white);
-			}
+	.title {
+		&--sm-40 {
+			@include titleTemplate(rem(40), 50px);
 		}
 
-		@include breakpoint(small) {
-			font-size: rem(16);
-			line-height: 22px;
+		&--sm-32 {
+			@include titleTemplate(rem(32), 48px);
 		}
-	}
-}
 
-.fab {
-	cursor: pointer;
-	font-size: rem(20);
-	&:hover {
-		color: var(--link-blue);
+		&--sm-20 {
+			@include titleTemplate(rem(20), 24px);
+		}
+
+		&--sm-16 {
+			@include titleTemplate(rem(16), 19px);
+		}
 	}
 }

@@ -26,6 +26,16 @@
 		width: 100%;
 	}
 
+	// pending
+	&__error {
+		@include textTemplate(rem(10), 14px);
+		font-weight: bold;
+		text-align: left;
+		margin-left: 38px;
+		color: var(--light-red);
+		visibility: hidden;
+	}
+
 	.btn--blue {
 		width: 100%;
 	}

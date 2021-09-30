@@ -206,132 +206,81 @@ ul {
 }
 
 .text--16 {
+  font-family: var(--text-font);
   font-size: 1rem;
   line-height: 24px;
 }
 .text--14 {
+  font-family: var(--text-font);
   font-size: 0.875rem;
   line-height: 21px;
 }
 .text--10 {
+  font-family: var(--text-font);
   font-size: 0.625rem;
   line-height: 12px;
-  letter-spacing: 0.5px;
 }
 .text--8 {
-  font-weight: normal;
+  font-family: var(--text-font);
   font-size: 0.5rem;
   line-height: 10px;
-  letter-spacing: 0.5px;
-}
-@media (min-width: 26.1875em) {
-  .text--sm-18 {
-    font-size: 1.125rem;
-    font-size: 20px;
-    line-height: 30px;
-  }
-  .text--sm-16 {
-    font-size: 1rem;
-    line-height: 24px;
-  }
-  .text--sm-14 {
-    font-size: 0.875rem;
-    line-height: 21px;
-  }
 }
 
 .title--18 {
   font-family: var(--title-font);
-  font-weight: bold;
-  line-height: 36px;
-  font-size: 1.5rem;
-}
-.title--18 {
-  font-family: var(--title-font);
-  font-weight: bold;
-  line-height: 24px;
   font-size: 1.125rem;
+  line-height: 24px;
+  font-weight: bold;
 }
 .title--12 {
   font-family: var(--title-font);
   font-size: 0.75rem;
   line-height: 14px;
+  font-weight: bold;
 }
+
 @media (min-width: 26.1875em) {
+  .text--sm-18 {
+    font-family: var(--text-font);
+    font-size: 1.125rem;
+    line-height: 30px;
+  }
+  .text--sm-16 {
+    font-family: var(--text-font);
+    font-size: 1rem;
+    line-height: 21px;
+  }
+  .text--sm-14 {
+    font-family: var(--text-font);
+    font-size: 0.875rem;
+    line-height: 18px;
+  }
+
   .title--sm-40 {
     font-family: var(--title-font);
     font-size: 2.5rem;
     line-height: 50px;
+    font-weight: bold;
   }
   .title--sm-32 {
     font-family: var(--title-font);
-    font-weight: bold;
     font-size: 2rem;
     line-height: 48px;
+    font-weight: bold;
   }
   .title--sm-20 {
     font-family: var(--title-font);
     font-size: 1.25rem;
-    line-height: 23px;
+    line-height: 24px;
+    font-weight: bold;
   }
   .title--sm-16 {
     font-family: var(--title-font);
     font-size: 1rem;
     line-height: 19px;
+    font-weight: bold;
   }
 }
-
-.productive__links {
-  font-family: "Open Sans", sans-serif;
-  font-weight: normal;
-  font-size: 1rem;
-  line-height: 24px;
-  /* links */
-  text-decoration: none;
-  color: var(--white);
-}
-
-.newsletter__error {
-  font-family: "Open Sans", sans-serif;
-  font-weight: bold;
-  font-size: 0.625rem;
-  text-align: left;
-  margin-left: 38px;
-  line-height: 14px;
-  color: var(--light-red);
-  /* pendiente */
-  visibility: hidden;
-}
-
-.link--blue {
-  text-decoration: none;
-  font-size: 0.75rem;
-  display: inline-block;
-  border-bottom: 1px solid;
-  padding-bottom: 5px;
-  color: var(--link-blue);
-}
-.link--blue:hover {
-  color: var(--white);
-}
-.link--blue:hover [fill="#62E0D9"] {
-  fill: var(--white);
-}
-@media (min-width: 26.1875em) {
-  .link--blue {
-    font-size: 1rem;
-    line-height: 22px;
-  }
-}
-
-.fab {
-  cursor: pointer;
-  font-size: 1.25rem;
-}
-.fab:hover {
-  color: var(--link-blue);
-}
-
 .btn--blue {
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -370,6 +319,7 @@ ul {
 }
 .header__link {
   display: inline-block;
+  font-weight: normal;
 }
 .header__link:hover {
   text-decoration: underline;
@@ -429,12 +379,33 @@ ul {
   flex-grow: 1;
   max-width: 565px;
 }
+.productive__link {
+  font-family: var(--text-font);
+  font-size: 0.75rem;
+  line-height: normal;
+  text-decoration: none;
+  display: inline-block;
+  border-bottom: 1px solid;
+  padding-bottom: 5px;
+  color: var(--link-blue);
+}
+.productive__link:hover {
+  color: var(--white);
+}
+.productive__link:hover [fill="#62E0D9"] {
+  fill: var(--white);
+}
 @media (min-width: 26.1875em) {
   .productive__img {
     flex-basis: 320px;
   }
   .productive__content {
     flex-basis: 320px;
+  }
+  .productive__link {
+    font-family: var(--text-font);
+    font-size: 1rem;
+    line-height: normal;
   }
 }
 @media (min-width: 43.125em) {
@@ -513,6 +484,16 @@ ul {
   border-radius: 25px;
   border: none;
   width: 100%;
+}
+.newsletter__error {
+  font-family: var(--text-font);
+  font-size: 0.625rem;
+  line-height: 14px;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 38px;
+  color: var(--light-red);
+  visibility: hidden;
 }
 .newsletter .btn--blue {
   width: 100%;

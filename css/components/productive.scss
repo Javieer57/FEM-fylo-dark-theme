@@ -1,4 +1,5 @@
 @use "../util/index" as *;
+
 .productive {
 	&__img {
 		flex-basis: auto;
@@ -11,12 +12,33 @@
 		max-width: 565px;
 	}
 
+	&__link {
+		@include textTemplate(rem(12));
+		text-decoration: none;
+		display: inline-block;
+		border-bottom: 1px solid;
+		padding-bottom: 5px;
+		color: var(--link-blue);
+
+		&:hover {
+			color: var(--white);
+
+			// arrow icon
+			[fill="#62E0D9"] {
+				fill: var(--white);
+			}
+		}
+	}
+
 	@include breakpoint(small) {
 		&__img {
 			flex-basis: 320px;
 		}
 		&__content {
 			flex-basis: 320px;
+		}
+		&__link {
+			@include textTemplate(rem(16));
 		}
 	}
 
