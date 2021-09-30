@@ -1,6 +1,9 @@
 @use "../util/index" as *;
 
 .hero {
+	text-align: center;
+	@include containerResponsive(720px);
+
 	&__content {
 		display: flex;
 		flex-wrap: wrap;

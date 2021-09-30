@@ -1,6 +1,19 @@
 @use "../util/index" as *;
 
 .productive {
+	margin-bottom: 120px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 50px 60px;
+
+	@include containerResponsive(1235px);
+
+	@include breakpoint(medium) {
+		flex-direction: row;
+	}
 	&__img {
 		flex-basis: auto;
 		flex-grow: 1;

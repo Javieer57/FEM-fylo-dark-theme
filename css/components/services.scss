@@ -1,9 +1,23 @@
-.service {
-	display: inline-block;
-	flex-basis: 300px;
-	flex-grow: 1;
-	max-width: 350px;
-	text-align: center;
+@use "../util/index" as *;
+
+.services {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 80px 50px;
+	@include containerResponsive(880px);
+
+	@media screen and(min-width:700px) {
+		justify-content: space-between;
+	}
+
+	&__card {
+		display: inline-block;
+		flex-basis: 300px;
+		flex-grow: 1;
+		max-width: 350px;
+		text-align: center;
+	}
 
 	&__img {
 		width: 104px;

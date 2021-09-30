@@ -1,7 +1,4 @@
-// Fonts variables in typography file
-// --text-font: "Open Sans", sans-serif;
-// --title-font: "Raleway", sans-serif;
-
+// Typography mixins
 @mixin textTemplate($font-size, $line-height: normal) {
 	font-family: var(--text-font);
 	font-size: $font-size;
@@ -13,4 +10,23 @@
 	font-size: $font-size;
 	line-height: $line-height;
 	font-weight: bold;
+}
+
+/**
+* This mixin makes responsive a container.
+* $size [px] arg1 [maximum width for container]
+*/
+@mixin containerResponsive($size) {
+	// For mobile, add a 25px padding
+	padding-left: 25px;
+	padding-right: 25px;
+
+	// Remove the padding when the specified width plus 50px is reached. Change the padding to an auto margin.
+	@media screen and (min-width: $size + 50px) {
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 0;
+		padding-right: 0;
+		max-width: $size;
+	}
 }

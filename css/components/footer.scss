@@ -1,7 +1,18 @@
 @use "../util/index" as *;
 
 .footer {
-	background-color: var(--footer-blue);
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 50px 40px;
+	padding: 50px 25px;
+	align-items: start;
+
+	@include containerResponsive(1240px);
+
+	@media screen and (min-width: 850px) {
+		justify-content: space-between;
+		grid-template-columns: minmax(auto, 380px) minmax(auto, 170px) minmax(auto, 235px) minmax(auto, 200px);
+	}
 
 	&__logo {
 		grid-column-start: 1;

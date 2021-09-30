@@ -1,5 +1,11 @@
 @use "../util/index" as *;
 
+// Fonts variables
+:root {
+	--text-font: "Open Sans", sans-serif;
+	--title-font: "Raleway", sans-serif;
+}
+
 // Default styles
 * {
 	margin: 0;

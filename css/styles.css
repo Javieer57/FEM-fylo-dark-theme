@@ -1,3 +1,12 @@
+/**
+* This mixin makes responsive a container.
+* $size [px] arg1 [maximum width for container]
+*/
+:root {
+  --text-font: "Open Sans", sans-serif;
+  --title-font: "Raleway", sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -81,128 +90,24 @@ ul {
   --btn-active: hsla(186, 61%, 72%, 1);
 }
 
-.container {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
 .container--header {
-  display: flex;
-  gap: 0 21%;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 25px;
+  background-color: var(--secondary-blue);
+  padding: 25px 0 50px;
 }
-@media (min-width: 82.5em) {
+@media screen and (min-width: 1330px) {
   .container--header {
-    max-width: 1280px;
-    padding: 0;
+    padding: 75px 0;
   }
 }
 .container--hero {
-  background-image: url("https://raw.githubusercontent.com/Javieer57/FEM-fylo-dark-theme/main/images/bg-curvy-desktop.svg");
-  background-size: contain;
-  background-color: var(--secondary-blue);
-  background-repeat: no-repeat;
-  background-position: center bottom;
-}
-.container--hero .hero {
-  text-align: center;
-  padding: 0 25px;
-  max-width: 720px;
-}
-@media (min-width: 48.125em) {
-  .container--hero {
-    padding: 0;
-  }
-}
-.container--services {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 80px 50px;
-  padding: 0 25px;
-}
-@media (min-width: 43.75em) {
-  .container--services {
-    justify-content: space-between;
-  }
-}
-@media (min-width: 58.125em) {
-  .container--services {
-    max-width: 880px;
-    padding: 0;
-  }
-}
-.container--productive {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: space-between;
-  justify-content: center;
-  align-items: center;
-  padding: 0 25px;
-  gap: 50px 60px;
-}
-@media (min-width: 43.125em) {
-  .container--productive {
-    flex-direction: row;
-  }
-}
-@media (min-width: 80.3125em) {
-  .container--productive {
-    padding: 0;
-    max-width: 1235px;
-  }
-}
-.container--testimonials {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px 40px;
-  justify-content: center;
-  padding: 0 45px;
-  margin-top: 120px;
-  margin-bottom: 160px;
-}
-@media (min-width: 78.125em) {
-  .container--testimonials {
-    padding: 0;
-    max-width: 1160px;
-    margin-bottom: 200px;
-  }
+  background: var(--secondary-blue) url("https://raw.githubusercontent.com/Javieer57/FEM-fylo-dark-theme/main/images/bg-curvy-desktop.svg") center bottom/contain no-repeat;
+  padding-bottom: 150px;
 }
 .container--newsletter {
-  background-image: linear-gradient(180deg, #181f2b 0%, #181f2b 48%, #0b1524 49%, #0b1524 100%);
-  padding: 0 20px;
-}
-@media (min-width: 56.4375em) {
-  .container--newsletter {
-    padding: 0;
-  }
+  background-image: linear-gradient(180deg, var(--main-blue) 0%, var(--main-blue) 48%, var(--footer-blue) 49%, var(--footer-blue) 100%);
 }
 .container--footer {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 50px 40px;
-  padding: 50px 25px;
-  align-items: start;
-}
-@media (min-width: 80.625em) {
-  .container--footer {
-    max-width: 1240px;
-    padding: 50px 0;
-  }
-}
-@media screen and (min-width: 850px) {
-  .container--footer {
-    justify-content: space-between;
-    grid-template-columns: minmax(auto, 380px) minmax(auto, 170px) minmax(auto, 235px) minmax(auto, 200px);
-  }
-}
-
-:root {
-  --text-font: "Open Sans", sans-serif;
-  --title-font: "Raleway", sans-serif;
+  background-color: var(--footer-blue);
 }
 
 .text--16 {
@@ -303,18 +208,26 @@ ul {
 }
 
 .header {
-  background-color: var(--secondary-blue);
-  padding: 25px 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 25px;
+  padding-right: 25px;
 }
-@media (min-width: 82.5em) {
+@media screen and (min-width: 1330px) {
   .header {
-    padding: 75px 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 1280px;
   }
 }
-.header__img {
-  max-width: 180px;
+.header__logo {
+  margin-right: 20%;
   flex-basis: 80px;
   flex-grow: 1;
+  max-width: 180px;
   min-width: 80px;
 }
 .header__link {
@@ -334,6 +247,20 @@ ul {
   }
 }
 
+.hero {
+  text-align: center;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+@media screen and (min-width: 770px) {
+  .hero {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 720px;
+  }
+}
 .hero__content {
   display: flex;
   flex-wrap: wrap;
@@ -354,14 +281,36 @@ ul {
   }
 }
 
-.service {
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 80px 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+@media screen and (min-width: 930px) {
+  .services {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 880px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .services {
+    justify-content: space-between;
+  }
+}
+.services__card {
   display: inline-block;
   flex-basis: 300px;
   flex-grow: 1;
   max-width: 350px;
   text-align: center;
 }
-.service__img {
+.services__img {
   width: 104px;
   height: 104px;
   display: flex;
@@ -369,6 +318,31 @@ ul {
   align-items: center;
 }
 
+.productive {
+  margin-bottom: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px 60px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+@media screen and (min-width: 1285px) {
+  .productive {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 1235px;
+  }
+}
+@media (min-width: 43.125em) {
+  .productive {
+    flex-direction: row;
+  }
+}
 .productive__img {
   flex-basis: auto;
   flex-grow: 1;
@@ -419,7 +393,27 @@ ul {
   }
 }
 
-.testimonial {
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px 40px;
+  justify-content: center;
+  padding: 0 45px;
+  margin-top: 120px;
+  margin-bottom: 160px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+@media screen and (min-width: 1210px) {
+  .testimonials {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 1160px;
+  }
+}
+.testimonials__card {
   background-color: var(--card-blue);
   border-radius: 5px;
   padding: 40px 25px 25px;
@@ -428,19 +422,18 @@ ul {
   max-width: 360px;
   position: relative;
 }
-.testimonial__img {
+.testimonials__img {
   display: inline-block;
   width: 30px;
   margin-right: 10px;
 }
-.testimonial__img img {
+.testimonials__img img {
   border-radius: 50%;
 }
-.testimonial__info {
+.testimonials__info {
   display: inline-block;
 }
-
-#first-testimonial::after {
+.testimonials #first-testimonial::after {
   background-image: url("/images/bg-quotes.png");
   background-size: cover;
   content: "";
@@ -453,7 +446,7 @@ ul {
   z-index: -1;
 }
 @media (min-width: 43.125em) {
-  #first-testimonial::after {
+  .testimonials #first-testimonial::after {
     height: 45px;
     left: -10px;
     top: -35px;
@@ -462,9 +455,21 @@ ul {
 }
 
 .newsletter {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+@media screen and (min-width: 913px) {
+  .newsletter {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 863px;
+  }
+}
+.newsletter__content {
   background-color: var(--secondary-blue);
   padding: 40px 25px;
-  max-width: 863px;
   border-radius: 10px;
   text-align: center;
   box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
@@ -499,7 +504,7 @@ ul {
   width: 100%;
 }
 @media (min-width: 43.125em) {
-  .newsletter {
+  .newsletter__content {
     padding: 40px 75px;
   }
   .newsletter__mail {
@@ -515,7 +520,28 @@ ul {
 }
 
 .footer {
-  background-color: var(--footer-blue);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 50px 40px;
+  padding: 50px 25px;
+  align-items: start;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+@media screen and (min-width: 1290px) {
+  .footer {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 1240px;
+  }
+}
+@media screen and (min-width: 850px) {
+  .footer {
+    justify-content: space-between;
+    grid-template-columns: minmax(auto, 380px) minmax(auto, 170px) minmax(auto, 235px) minmax(auto, 200px);
+  }
 }
 .footer__logo {
   grid-column-start: 1;

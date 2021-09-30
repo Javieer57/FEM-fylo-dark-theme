@@ -1,122 +1,25 @@
 @use "../util/index" as *;
 
-// General container styles
 .container {
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-
-	// Specific container styles
 	&--header {
-		display: flex;
-		gap: 0 21%;
-		justify-content: space-between;
-		align-items: center;
-		padding: 0 25px;
+		background-color: var(--secondary-blue);
+		padding: 25px 0 50px;
 
-		@include breakpoint(header) {
-			max-width: 1280px;
-			padding: 0;
+		@media screen and (min-width: 1280px + 50px) {
+			padding: 75px 0;
 		}
 	}
 
 	&--hero {
-		background-image: url("https://raw.githubusercontent.com/Javieer57/FEM-fylo-dark-theme/main/images/bg-curvy-desktop.svg");
-		background-size: contain;
-		background-color: var(--secondary-blue);
-		background-repeat: no-repeat;
-		background-position: center bottom;
-
-		.hero {
-			text-align: center;
-			padding: 0 25px;
-			max-width: 720px;
-		}
-
-		@include breakpoint(hero) {
-			padding: 0;
-		}
-	}
-
-	&--services {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		gap: 80px 50px;
-		padding: 0 25px;
-
-		@include breakpoint(services-layout) {
-			justify-content: space-between;
-		}
-
-		@include breakpoint(services) {
-			max-width: 880px;
-			padding: 0;
-		}
-	}
-
-	&--productive {
-		display: flex;
-		flex-wrap: wrap;
-		flex-direction: column;
-		justify-content: space-between;
-		justify-content: center;
-		align-items: center;
-		padding: 0 25px;
-		gap: 50px 60px;
-
-		@include breakpoint(medium) {
-			flex-direction: row;
-		}
-
-		@include breakpoint(productive) {
-			padding: 0;
-			max-width: 1235px;
-		}
-	}
-
-	&--testimonials {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 25px 40px;
-		justify-content: center;
-		padding: 0 45px;
-		margin-top: 120px;
-		margin-bottom: 160px;
-
-		@include breakpoint(testimonials) {
-			padding: 0;
-			max-width: 1160px;
-			margin-bottom: 200px;
-		}
+		background: var(--secondary-blue) url("https://raw.githubusercontent.com/Javieer57/FEM-fylo-dark-theme/main/images/bg-curvy-desktop.svg") center bottom/contain no-repeat;
+		padding-bottom: 150px;
 	}
 
 	&--newsletter {
-		background-image: linear-gradient(180deg, rgba(24, 31, 43, 1) 0%, rgba(24, 31, 43, 1) 48%, rgba(11, 21, 36, 1) 49%, rgba(11, 21, 36, 1) 100%);
-		padding: 0 20px;
-		@include breakpoint(newsletter) {
-			padding: 0;
-		}
+		background-image: linear-gradient(180deg, var(--main-blue) 0%, var(--main-blue) 48%, var(--footer-blue) 49%, var(--footer-blue) 100%);
 	}
 
 	&--footer {
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-gap: 50px 40px;
-		padding: 50px 25px;
-		align-items: start;
-
-		@include breakpoint(footer) {
-			max-width: 1240px;
-			padding: 50px 0;
-		}
-
-		@media screen and (min-width: 850px) {
-			// Sencillo
-			// grid-template-columns: repeat(4, 1fr);
-			// Complicado
-			justify-content: space-between;
-			grid-template-columns: minmax(auto, 380px) minmax(auto, 170px) minmax(auto, 235px) minmax(auto, 200px);
-		}
+		background-color: var(--footer-blue);
 	}
 }

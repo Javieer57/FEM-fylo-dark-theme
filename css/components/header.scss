@@ -1,17 +1,16 @@
 @use "../util/index" as *;
 
 .header {
-	background-color: var(--secondary-blue);
-	padding: 25px 0 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	@include containerResponsive(1280px);
 
-	@include breakpoint(header) {
-		padding: 75px 0;
-	}
-
-	&__img {
-		max-width: 180px;
+	&__logo {
+		margin-right: 20%;
 		flex-basis: 80px;
 		flex-grow: 1;
+		max-width: 180px;
 		min-width: 80px;
 	}
 

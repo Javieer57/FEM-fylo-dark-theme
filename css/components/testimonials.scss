@@ -1,13 +1,25 @@
 @use "../util/index" as *;
 
-.testimonial {
-	background-color: var(--card-blue);
-	border-radius: 5px;
-	padding: 40px 25px 25px;
-	flex-grow: 1;
-	flex-basis: 280px;
-	max-width: 360px;
-	position: relative;
+.testimonials {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 25px 40px;
+	justify-content: center;
+	padding: 0 45px;
+	margin-top: 120px;
+	margin-bottom: 160px;
+
+	@include containerResponsive(1160px);
+
+	&__card {
+		background-color: var(--card-blue);
+		border-radius: 5px;
+		padding: 40px 25px 25px;
+		flex-grow: 1;
+		flex-basis: 280px;
+		max-width: 360px;
+		position: relative;
+	}
 
 	&__img {
 		display: inline-block;
@@ -22,27 +34,27 @@
 	&__info {
 		display: inline-block;
 	}
-}
 
-// Position quotes image
-#first-testimonial {
-	&::after {
-		background-image: url("/images/bg-quotes.png");
-		background-size: cover;
-		content: "";
-		display: inline-block;
-		height: 35px;
-		left: 8px;
-		position: absolute;
-		top: -30px;
-		width: 45px;
-		z-index: -1;
+	// Position quotes image
+	#first-testimonial {
+		&::after {
+			background-image: url("/images/bg-quotes.png");
+			background-size: cover;
+			content: "";
+			display: inline-block;
+			height: 35px;
+			left: 8px;
+			position: absolute;
+			top: -30px;
+			width: 45px;
+			z-index: -1;
 
-		@include breakpoint(medium) {
-			height: 45px;
-			left: -10px;
-			top: -35px;
-			width: 55px;
+			@include breakpoint(medium) {
+				height: 45px;
+				left: -10px;
+				top: -35px;
+				width: 55px;
+			}
 		}
 	}
 }
