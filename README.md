@@ -49,6 +49,29 @@ Users should be able to:
 
 ### What I learned
 
+The project's design had containers with differents widths that I wanted to follow but, it was hard to make everyone responsive. So I make a mixin that can handle that and only need the maximum width I want in the container.
+
+```scss
+/**
+* This mixin makes responsive a container.
+* $size [px] arg1 [maximum width for container]
+*/
+@mixin containerResponsive($size) {
+	// For mobile, add a 25px padding
+	padding-left: 25px;
+	padding-right: 25px;
+
+	// Remove the padding when the specified width plus 50px is reached. Change the padding to an auto margin.
+	@media screen and (min-width: $size + 50px) {
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 0;
+		padding-right: 0;
+		max-width: $size;
+	}
+}
+```
+
 During this project, I learned more about how to use flexbox and the flex-basis and flex-grow properties. I used them specifically to make the testimonials cards responsive, without any media queries. It was helpful.
 
 ```scss
