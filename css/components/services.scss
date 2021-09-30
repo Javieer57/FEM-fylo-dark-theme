@@ -5,6 +5,7 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 80px 50px;
+	margin-bottom: 150px;
 	@include containerResponsive(880px);
 
 	@media screen and(min-width:700px) {
@@ -25,5 +26,6 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		margin: auto;
 	}
 }

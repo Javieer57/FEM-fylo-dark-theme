@@ -29,53 +29,43 @@ a {
   text-decoration: none;
 }
 
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 ul {
   list-style-type: none;
 }
 
+/**
+* This loop creates margin classes from 5 to 5 up to 40.
+*/
 .mb-5 {
-  margin-bottom: 0.3125rem;
+  margin-bottom: 5px;
 }
 
 .mb-10 {
-  margin-bottom: 0.625rem;
+  margin-bottom: 10px;
 }
 
 .mb-15 {
-  margin-bottom: 0.9375rem;
+  margin-bottom: 15px;
 }
 
 .mb-20 {
-  margin-bottom: 1.25rem;
+  margin-bottom: 20px;
 }
 
 .mb-25 {
-  margin-bottom: 1.5625rem;
+  margin-bottom: 25px;
 }
 
 .mb-30 {
-  margin-bottom: 1.875rem;
+  margin-bottom: 30px;
 }
 
 .mb-35 {
-  margin-bottom: 2.1875rem;
+  margin-bottom: 35px;
 }
 
 .mb-40 {
-  margin-bottom: 2.5rem;
-}
-
-.mb-75 {
-  margin-bottom: 4.6875rem;
-}
-
-.mb-150 {
-  margin-bottom: 9.375rem;
+  margin-bottom: 40px;
 }
 
 :root {
@@ -286,6 +276,7 @@ ul {
   flex-wrap: wrap;
   justify-content: center;
   gap: 80px 50px;
+  margin-bottom: 150px;
   padding-left: 25px;
   padding-right: 25px;
 }
@@ -316,6 +307,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: auto;
 }
 
 .productive {
@@ -546,6 +538,7 @@ ul {
 .footer__logo {
   grid-column-start: 1;
   grid-column-end: -1;
+  max-width: 108px;
 }
 .footer__location {
   display: flex;

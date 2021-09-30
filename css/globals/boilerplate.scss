@@ -6,7 +6,7 @@
 	--title-font: "Raleway", sans-serif;
 }
 
-// Default styles
+// Reset styles
 * {
 	margin: 0;
 	padding: 0;
@@ -29,51 +29,15 @@ a {
 	text-decoration: none;
 }
 
-.mx-auto {
-	margin-left: auto;
-	margin-right: auto;
-}
-
 ul {
 	list-style-type: none;
 }
 
-.mb-5 {
-	margin-bottom: rem(5);
-}
-
-.mb-10 {
-	margin-bottom: rem(10);
-}
-
-.mb-15 {
-	margin-bottom: rem(15);
-}
-
-.mb-20 {
-	margin-bottom: rem(20);
-}
-
-.mb-25 {
-	margin-bottom: rem(25);
-}
-
-.mb-30 {
-	margin-bottom: rem(30);
-}
-
-.mb-35 {
-	margin-bottom: rem(35);
-}
-
-.mb-40 {
-	margin-bottom: rem(40);
-}
-
-.mb-75 {
-	margin-bottom: rem(75);
-}
-
-.mb-150 {
-	margin-bottom: rem(150);
+/**
+* This loop creates margin classes from 5 to 5 up to 40.
+*/
+@for $i from 1 through 8 {
+	.mb-#{$i * 5} {
+		margin-bottom: ($i * 5px);
+	}
 }

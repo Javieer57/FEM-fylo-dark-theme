@@ -72,6 +72,48 @@ The project's design had containers with differents widths that I wanted to foll
 }
 ```
 
+I realized that the design works with margin from 5px to 5px up to 40px in their elements (like text or images). So created a little loop with sass to avoid writing every class separately.
+
+```scss
+/**
+* This loop creates margin classes from 5 to 5 up to 40.
+*/
+@for $i from 1 through 8 {
+	.mb-#{$i * 5} {
+		margin-bottom: ($i * 5px);
+	}
+}
+```
+
+To work with texts and titles styles, I added two mixins and only need the font size and the line height for each class.
+
+```scss
+@mixin textTemplate($font-size, $line-height: normal) {
+	font-family: var(--text-font);
+	font-size: $font-size;
+	line-height: $line-height;
+}
+
+@mixin titleTemplate($font-size, $line-height: normal) {
+	font-family: var(--title-font);
+	font-size: $font-size;
+	line-height: $line-height;
+	font-weight: bold;
+}
+
+.text {
+	&--16 {
+		@include textTemplate(rem(16), 24px);
+	}
+}
+
+.title {
+	&--18 {
+		@include titleTemplate(rem(18), 24px);
+	}
+}
+```
+
 During this project, I learned more about how to use flexbox and the flex-basis and flex-grow properties. I used them specifically to make the testimonials cards responsive, without any media queries. It was helpful.
 
 ```scss
@@ -87,14 +129,12 @@ In the beginning, I doesn't have consistency in the typography styles and repeat
 ```scss
 .text {
 	&--16 {
-		font-size: rem(16);
-		line-height: 24px;
+		@include textTemplate(rem(16), 24px);
 	}
 
 	@include breakpoint(small) {
 		&--sm-16 {
-			font-size: rem(16);
-			line-height: 24px;
+			@include textTemplate(rem(16), 24px);
 		}
 	}
 }
